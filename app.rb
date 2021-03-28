@@ -47,19 +47,32 @@ post '/signin' do
     user = User.find_by(mail: params[:mail])
     if user && user.authenticate(params[:password])
         session[:user] = user.id
+        session[:login_error] = nil
+        redirect '/home'
+    else
+        session[:login_error] = "emailまたはパスワードが違います"
+        erb :sign_in
     end
-    redirect '/home'
+end
+
+get '/sign_out' do
+    session[:user] = nil
+    redirect '/'
 end
 
 
 post '/signup' do
     @user = User.create(mail: params[:mail],password: params[:password],
       password_confirmation:params[:password_confirmation])
-    p @user
+    if @user.authenticate(params[:password]) && @user.authenticate(params[:password_confirmation])
+        redirect '/'
+    else
+        session[:signup_error] = "パスワードが一致していません"
+        redirect '/signup'
+    end
     if @user.persisted?
         session[:user] = @user.id
     end
-    redirect '/'
 end
 
 get '/signout' do
@@ -82,12 +95,12 @@ post '/note' do
         title_page: img_url
     })
     
-    redirect '/'
+    redirect '/home'
 end
 
 post'/delete/note/:id' do
     Note.find(params[:id]).destroy
-    redirect'/'
+    redirect'/home'
 end
 
 

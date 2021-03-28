@@ -18,7 +18,16 @@ header{
   border-bottom-color: #232323;
 }
 
+.title-a{
+  font-size: 45px;
+  margin: 25px 0;
+  text-decoration: none;
+  color: #078080;
+  float: left;
+}
+
 .title{
+  display: inline-block;
   font-size: 45px;
   margin: 25px 0;
   text-decoration: none;

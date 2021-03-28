@@ -1,15 +1,25 @@
 <!DOCTYPE html>
-<html lang = ja>
+<html lang="ja">
 <head>
-    <meta chaerst=@utf-8>
-    <title>StickerNote</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scle=1">
+  <title>StickerNote</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;300&display=swap" rel="stylesheet">
 </head>
-<body>
-    <form action="/signin" method="post">
-        <input type="text" name="mail" placeholder="Eメール"><br>
-        <input type="password" name="password" placeholder="パスワード"><br>
-        <input type="submit" value="ログイン"><br>
-    </form>
-    <a href="/signup">新規登録</a>
-</body>
+　　<header>
+      　<a class="title">StickerBook</a>
+    </header>
+　　<body>
+    　　<% if session[:login_error] %>
+        　　<p><%= session[:login_error] %></p>
+    　　<% end %>
+    　　<form class="account-action" action="/signin" method="post">
+        　　<input type="text" name="mail" placeholder="Eメール"><br>
+        　　<input type="password" name="password" placeholder="パスワード"><br>
+      　　　　<input type="submit" value="ログイン"><br>
+    　　</form>
+    　　<a href="/signup">新規登録</a>
+　　</body>
 </html>

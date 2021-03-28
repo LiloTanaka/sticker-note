@@ -10,11 +10,17 @@
 </head>
 <body>
   <header>
-    <a href="/" class="title">StickerBook</a>
+    <a href="/home" class="title-a">StickerBook</a>
+    <%if logged_in? %>
+    　<a href="/sign_out">ログアウト</a>
+  　<% else %>
+  　　<a href="/sign_in">ログインする</a>
+  　<% end %>
   </header>
   
   
   <h2>How to use</h2>
+  
   <p class="instructions">Welcome to StickerBook!!<br>
   閲覧者が協力してStickerBookを作るサイトです。<br>
   カラー指定のあるBookや雰囲気、キャラクター指定のあるBookなど<br>
