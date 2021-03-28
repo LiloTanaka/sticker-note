@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scle=1">
+  <title>StickerNote</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;300&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <a href="/" class="title">StickerBook</a>
+  </header>
+  
+  
+  <h2>How to use</h2>
+  <p class="instructions">Welcome to StickerBook!!<br>
+  閲覧者が協力してStickerBookを作るサイトです。<br>
+  カラー指定のあるBookや雰囲気、キャラクター指定のあるBookなど<br>
+  Bookごとに世界観を持ってステッカー（画像）を集めていってください。</p>
+  
+  <h2>Form</h2>
+  
+    <p class="instructions">StickerBookのタイトル・作成者名・表紙画像を選択して投稿してください。</p>
+  
+  <form class="form" action="/note" method="post" enctype="multipart/form-data">
+    <p class="book_name_s">タイトル</p><input type="text" name="title" required><br>
+    <p class="book_name_s">名前</p><input type="text" name="name" required><br>
+    <p class="file"><input type="file" name="file" required></p>
+    <input type="submit" value="POST" class="post_btn">
+  </form>
+  
+   <h2>Gallery</h2>
+   
+     <p class="instructions">皆様の投稿されたStickerBookです。<br>
+     写真をクリックすると中身を見ることができます。</p>
+  
+  <div class="container">
+  <% @contents.each do |content| %>
+  <div class="note">
+    <div class="imgWrap">
+    <% unless content.title_page.nil? %>
+      <p><a href="/sticker/<%= content.id %>"><img src="<%= content.title_page %>" width="700" height="300"></a></p>
+    <% end %>
+    </div>
+    <div class="detail">
+    <p class="book_name"><%= content.title %></p>
+    <p class="book_name"><%= content.name %></p>
+    <form action="/delete/note/<%= content.id %>" method="post">
+      <input type="submit" value="DELETE" class="delete_btn">
+    </div>
+    </form>
+  </div>
+  <% end %>
+  </div>
+  
+  <footer>
+   <p>&copy;2020/12/29</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+新規登録・ログイン機能の追加
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Author:    LiloTanaka <lilo93choco@icloud.com>
+# Date:      Sun Mar 28 06:53:07 2021 +0000
+#
+# On branch master
+# Changes to be committed:
+#	modified:   app.rb
+#	modified:   db/development.db
+#	new file:   db/migrate/20210327074952_create_users.rb
+#	modified:   db/schema.rb
+#	new file:   models/user.rb
+#	modified:   views/index.erb
+#	new file:   views/layout.erb
+#	new file:   views/sign_in.erb
+#	new file:   views/sign_up.erb
+#

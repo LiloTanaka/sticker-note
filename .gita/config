@@ -1,0 +1,13 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "heroku"]
+	url = https://git.heroku.com/vast-waters-02383.git
+	fetch = +refs/heads/*:refs/remotes/heroku/*
+[remote "origin"]
+	url = https://github.com/LiloTanaka/sticker-note.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[user]
+	email = 69186121+LiloTanaka@users.noreply.github.com
