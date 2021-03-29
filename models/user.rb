@@ -7,4 +7,6 @@ class User < ActiveRecord::Base
     format: {with:/.+@.+/}
     validates :password,
     length: {in: 5..10}
+    
+    has_many :notes
 end

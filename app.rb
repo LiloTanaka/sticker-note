@@ -21,6 +21,9 @@ helpers do
     def logged_in?
         !!session[:user]
     end
+    def current_user
+        User.find(session[:user])
+    end
 end
 
 
@@ -30,8 +33,7 @@ end
 
 get '/home' do
     @contents = Note.all.order('id desc')
-    p session[:user]
-    if session[:user]
+    if logged_in?
         erb :index
     else
         redirect '/'

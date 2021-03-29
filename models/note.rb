@@ -1,6 +1,7 @@
 ActiveRecord::Base.establish_connection(ENV['DATABASE_URL']||"sqlite3:db/development.db")
 class Note < ActiveRecord::Base
     has_many :stickers
+    belongs_to :user
 end
 
 class Sticker < ActiveRecord::Base
