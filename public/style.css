@@ -28,11 +28,10 @@ header{
 
 .title{
   display: inline-block;
-  font-size: 45px;
-  margin: 25px 0;
+  font-size: 4vw;
+  margin: 25px auto;
   text-decoration: none;
   color: #078080;
-  float: left;
 }
 
 /*.title:hover{*/
@@ -42,16 +41,6 @@ header{
 /*  border-bottom-color: #232323;*/
 /*}*/
 
-h2{
-  margin-top: 70px;
-  color: #222525;
-  font-size: 30px;
-  padding-left: 2vw;
-  margin-right: 10px;
-  border-left-style: solid;
-  border-left-width: 7px;
-  border-left-color: #f45d48;
-}
 
 /*.h2_2{*/
 /*  margin-top: 50px;*/
@@ -209,6 +198,12 @@ footer{
     border-left-style: solid;
     border-left-width: 7px;
     border-left-color: #f45d48;
+  }
+  
+  .use-discription {
+    color: #222525;
+    font-size: 4vw;
+    align: center
   }
   
   .form{

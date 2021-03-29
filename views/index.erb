@@ -32,11 +32,10 @@
     <input type="submit" value="POST" class="post_btn">
   </form>
   
-   <h2>Gallery</h2>
-   
-     <p class="instructions">皆様の投稿されたStickerBookです。<br>
-     写真をクリックすると中身を見ることができます。</p>
-  
+    <h2>Gallery</h2>
+    <% @contents.each do |content| %>
+      
+    <% end %>
   <div class="container">
   <% @contents.each do |content| %>
   <div class="note">
@@ -46,12 +45,16 @@
     <% end %>
     </div>
     <div class="detail">
-    <p class="book_name"><%= content.title %></p>
-    <p class="book_name"><%= content.name %></p>
-    <form action="/delete/note/<%= content.id %>" method="post">
-      <input type="submit" value="DELETE" class="delete_btn">
+      <p class="book_name"><%= content.title %></p>
+      <p class="book_name"><%= content.name %></p>
+      <form action="/delete/note/<%= content.id %>" method="post">
+        <input type="submit" value="DELETE" class="delete_btn">
+      </form>
     </div>
-    </form>
+    <% stickers = content.stickers %>
+      <% stickers.each do  |sticker| %>
+        <p><img src="<%= sticker.image %>"></p>
+    <% end %>
   </div>
   <% end %>
   </div>
