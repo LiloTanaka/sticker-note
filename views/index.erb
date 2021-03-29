@@ -28,6 +28,7 @@
     <p class="book_name_s">タイトル</p><input type="text" name="title" required><br>
     <p class="book_name_s">名前</p><input type="text" name="name" required><br>
     <p class="file"><input type="file" name="file" required></p>
+    <input  type="hidden" value="<%= current_user.id %>" name="user">
     <input type="submit" value="POST" class="post_btn">
   </form>
   

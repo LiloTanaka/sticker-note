@@ -90,11 +90,11 @@ post '/note' do
         upload = Cloudinary::Uploader.upload(tempfile.path)
         img_url = upload['url']
     end
-    
     Note.create({
         title: params[:title],
         name: params[:name],
-        title_page: img_url
+        title_page: img_url,
+        user_id:  params[:user]
     })
     
     redirect '/home'
