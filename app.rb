@@ -32,7 +32,7 @@ get '/' do
 end
 
 get '/home' do
-    @contents = Note.all.order('id desc')
+    @contents = current_user.my_notes
     if logged_in?
         erb :index
     else

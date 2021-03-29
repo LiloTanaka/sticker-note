@@ -9,4 +9,9 @@ class User < ActiveRecord::Base
     length: {in: 5..10}
     
     has_many :notes
+    
+    def my_notes
+        self.notes.where(user_id: self.id)
+    end
+    
 end
