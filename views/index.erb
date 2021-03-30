@@ -12,7 +12,7 @@
   <header>
     <a href="/home" class="title-a">StickerBook</a>
     <%if logged_in? %>
-    　<a href="/sign_out">ログアウト</a>
+    　<a href="/sign_out" class="logout_btn">ログアウト</a>
   　<% else %>
   　　<a href="/sign_in">ログインする</a>
   　<% end %>
@@ -34,8 +34,8 @@
   
    <h2>Gallery</h2>
    
-     <p class="instructions">皆様の投稿されたStickerBookです。<br>
-     写真をクリックすると中身を見ることができます。</p>
+     <p class="instructions">写真をクリックすると中身を見ることができます。<br>
+     何も投稿がないと表示がありません。</p>
   
   <div class="container">
   <% @contents.each do |content| %>

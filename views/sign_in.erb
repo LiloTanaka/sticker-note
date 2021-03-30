@@ -12,15 +12,15 @@
       　<a class="title">StickerBook</a>
     </header>
 　　<body>
-　　    <h2>Welcome to StickerBook!</h2>
+　　    <h2 class="welcome">Welcome to StickerBook!</h2>
     　　<% if session[:login_error] %>
         　　<p><%= session[:login_error] %></p>
     　　<% end %>
     　　<form class="account-action" action="/signin" method="post">
-        　　<input type="text" name="mail" placeholder="Eメール"><br>
-        　　<input type="password" name="password" placeholder="パスワード"><br>
-      　　　　<input type="submit" value="ログイン"><br>
-    　　</form>
-    　　<a href="/signup">新規登録</a>
+        　　<div class="input-area"><input type="text" name="mail" placeholder="Eメール"><br></div>
+        　　<div class="input-area"><input type="password" name="password" placeholder="パスワード"><br></div>
+      　　　　<div class="input-area"><input type="submit" value="ログイン"><br></div>
+            <div class="input-area"><a href="/signup" class="btn_signup_inverse">新規登録</a></div>    　
+        </form>
 　　</body>
 </html>

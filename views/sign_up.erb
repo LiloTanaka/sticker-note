@@ -15,14 +15,15 @@
     
 　　<body>
    　　 <form class="account-action" action="/signup" method="post">
-       　　 <input type="text" name="mail" placeholder="Eメール"><br>
-      　　　  <p>パスワードは５文字以上</p>
-        　　<input type="password" name="password" placeholder="パスワード"><br>
-        　　<input type="password" name="password_confirmation" placeholder="パスワードの確認"><br>
+       　　 <div class="input-area"><input type="text" name="mail" placeholder="Eメール"><br></div>
+      　　　  <p class="input-area">パスワードは５文字以上</p>
+        　　<div class="input-area"><input type="password" name="password" placeholder="パスワード"><br></div>
+        　　<div class="input-area"><input type="password" name="password_confirmation" placeholder="パスワードの確認"><br></div>
         　　<% if session[:signup_error] %>
-        　　　　<p><%= session[:signup_error] %></p>
+        　　　　<p class="input-area"><%= session[:signup_error] %></p>
         　　<% end %>
-        　　<input type="submit" value="新規登録">
+        　　<div class="input-area"><input type="submit" value="新規登録"></div>
+        　　<div class="input-area"><a href="/" class="btn_signup_inverse">ログイン</a></a></div>  
     　　</form>
 　　</body>
 　　

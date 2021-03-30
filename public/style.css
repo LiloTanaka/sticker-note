@@ -26,13 +26,16 @@ header{
   float: left;
 }
 
-.title{
+.logout_btn {
   display: inline-block;
+  float: right;
+}
+
+.title{
   font-size: 45px;
-  margin: 25px 0;
+  margin: 25px auto;
   text-decoration: none;
   color: #078080;
-  float: left;
 }
 
 /*.title:hover{*/
@@ -41,11 +44,10 @@ header{
 /*  border-bottom-width: 1px;*/
 /*  border-bottom-color: #232323;*/
 /*}*/
-
 h2{
   margin-top: 70px;
   color: #222525;
-  font-size: 30px;
+  font-size: 3vw;
   padding-left: 2vw;
   margin-right: 10px;
   border-left-style: solid;
@@ -53,16 +55,13 @@ h2{
   border-left-color: #f45d48;
 }
 
-/*.h2_2{*/
-/*  margin-top: 50px;*/
-/*  color: #222525;*/
-/*  font-size: 35px;*/
-/*  padding-left: 20px;*/
-/*  margin-right: 10px;*/
-/*  border-left-style: solid;*/
-/*  border-left-width: 7px;*/
-/*  border-left-color: #f45d48;*/
-/*}*/
+
+.welcome {
+  border-left: none;
+  font-size: 3vw;
+  text-align: center;
+  margin: 4vw auto;
+}
 
 .instructions{
     margin: 20px 0;
@@ -72,21 +71,52 @@ h2{
 }
 
 .form{
-    width: 70%;
-    margin: 0 auto;
-    margin-top: 50px;
-    padding: 20px;
-    border-color: #232323;
-    border-style: solid;
-    border-radius: 20px;
-    border-width: 1px;
+  padding: 40px;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 50px;
+  border-color: #232323;
+  border-style: solid;
+  border-radius: 20px;
+  border-width: 1px;
+}
+
+.input-area {
+  text-align: center;
+}
+
+.account-action {
+  width: 50%;
+  margin: 10px auto;
+  margin-bottom: 30px;
+  border-color: #232323;
+  border-style: solid;
+  border-radius: 20px;
+  border-width: 1px;
+}
+
+
+.btn_signup {
+  margin: 0 auto;
+  text-decoration: none;
+  color:  #232323;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #232323;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+.btn_signup_inverse {
+  margin: 0 auto;
+  padding: 3px;
 }
 
 .book_name_s{
-    display: inline-block;
-    width: 80px;
-    text-align: center;
-    font-size: 13px;
+  display: inline-block;
+  width: 80px;
+  text-align: center;
+  font-size: 13px;
 }
 
 p{
